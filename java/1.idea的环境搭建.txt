@@ -4,7 +4,7 @@
 
 3.配置样式，编码
 
-4.配置maven
+4.官网下载maven,配置maven
 1) 配置maven的环境变量
 2）修改conf目录中修改settings.xml文件
 
@@ -17,3 +17,4 @@
   <url>http://maven.aliyun.com/nexus/content/groups/public</url>      
   <mirrorOf>central</mirrorOf>        
 </mirror>    
+3)在idea中setting中配置maven中的路径
