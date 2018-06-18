@@ -2,6 +2,8 @@
 https://github.com/WinterChenS/my-site
 https://github.com/WinterChenS/springboot2-mybatis-demo
 
+注意：每创建一个新项目都要重新配置maven,以及编码格式
+
 2.注解
 1）Action：
 类中
