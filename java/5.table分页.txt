@@ -1,3 +1,1 @@
-1.引用bootstrap框架
-2.用html
-3.热部署（不用重新运行）
+1.mybatis-PageHelper高效准确的分页，动态排序

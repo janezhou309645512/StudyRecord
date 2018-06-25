@@ -1,5 +1,22 @@
-css
-1，定位position
+﻿css
+
+1.选择器：
+id-----#
+class----.test
+
+
+
+2.基本属性
+width:px
+height:px
+backgroud:
+position:
+left:
+top:
+
+
+
+3，定位position
 ----static普通流（默认）
 块级元素换行 内联元素横向排列
 ----relative：相对定位
