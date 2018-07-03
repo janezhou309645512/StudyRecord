@@ -99,7 +99,23 @@
 2.OKHTTP的底层协议
 3.多线程
 4.as处理内纯泄漏
+工具：profiler
+1)情况activity finish()后 gc无法回收 delay太长 一直运行 
+
+5.listview加载原理
+6.baseadapterview加载
+7.事件的分发机制
+
+内存分析：
+
+
+
+
+
 5.开源社区
+图片加载 Picasso
+视频播放 playerBase3
+
 
 
 
