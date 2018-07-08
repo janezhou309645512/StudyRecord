@@ -1,0 +1,21 @@
+1.sql同时执行，一个失败，就会回滚所有操作
+jdbc示例：
+事务控制，一起提交或回滚。
+Connection conn = .... // 取得数据库连接；
+conn.setAutoCommit(false); // 关闭自动提交;
+try{
+Statement statement = con.createStatement();
+ statement.executeUpdate(sql1);
+statement.executeUpdate(sql2);
+...... // 你的处理数据代码.
+conn.commit(); // 提交事务.
+}catch(Exception ex){
+conn.rollback(); // 失败回滚.
+}finally{
+try {
+//设置事务提交方式为自动提交：
+con.setAutoCommit(true);
+} catch (SQLException e) {}
+DBCManager.release(rs, ps, con);
+------------------------------------------
+注意：只有当多个语句同时为1时才执行

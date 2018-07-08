@@ -1,0 +1,40 @@
+？由于在数据库中可能数据太多 
+一次性查询可能太慢，所以要出现分页查询
+
+1.sql语句分页
+------my sql数据库
+select * from  o limit firstIndex(下标）,pageSize（页数）
+firstIndex:起始的索引
+pageSize:每页显示的记录数
+
+-----sql server数据库
+select top pageSize * from (select row_number() over(order by orderColumn) as rownumber,* from as o where rownumber>firstIndex; 
+ 
+firstIndex:起始索引
+pageSize:每页显示的数量
+orderColumn:排序的字段名
+
+
+-----oracle数据库中
+①ROWNUM查询分页通式：
+select * from(select *,ROWNUM rn from a where ROWNUM<=(firstIndex+pageSize)) where rn>firstIndex
+firstIndex:起始索引
+pageSize:每页显示的数量
+②row_number()解析函数分页查询通式：
+select * from(select * from(select *,row_number() over(order by orderColumn) as rownumber from t) p where p.rownumber>firstIndex) where rownum<=pageSize
+firstIndex:起始索引
+pageSize:每页显示的数量
+orderColumn:排序的字段名
+
+2.jdbc分页
+
+
+
+
+
+
+
+
+
+
+3.在显示器上分页
