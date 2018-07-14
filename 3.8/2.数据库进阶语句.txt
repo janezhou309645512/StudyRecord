@@ -1,0 +1,85 @@
+﻿查询语句进阶：
+1.字段别名    as或者空格
+2.Where(条件查询）
+1）where -比较符
+select name,age from emp where name='jane';(文本值用单引号，日期要注意格式）
+select name,age from emp where age<=10;
+2）where -in//  用于字段可以接受的值
+where age in(10,12,13);
+where name not in('jane','zhou')
+3）where-between//字段值的范围
+where age between 1000 and 1500;
+where age not between 1000 and 1500;
+4)where -is null//除去空值
+5）where -逻辑查询
+where age>=1100 and name='jane';//且
+where age>=1100 or name='jane';//或
+6)where -like //匹配的字符
+两种通配符
+_表示单个字符
+%表示多个字符的序列
+----order by子句//指定顺序进行查询
+select name,age from emp order by age;
+order by age DESC;//降序
+order by age ASC;//降序
+----Group by 子句//分组
+1）函数
+2）AVG,MAX,MIN,SUM
+3) COUNT
+4)
+
+
+3.子查询
+1）单行子查询
+2）多行子查询
+--IN(子查询） //在那个范围
+--ANY(子查询）//比较最小的
+--ALL（子查询）//比较最小的
+
+
+----------------------------------------------------
+4.多表查询：
+---join on//
+1) 全连接
+2) TableA INNER JOIN TableB 
+ON TableA.name = TableB.name
+Inner join//产生的是表A和表B的交集
+3）左外连接，left outer join ... on
+把LEFT左边的表中的所有记录保留，右边表只保留相关联的记录
+4) 右外连接，right outer join ... on 
+示例：
+select a.fnumber billNumber,--单据编码
+c.FName_l2 transactionType ,
+--事务类型
+d.fnumber materialNumber,--物料编码
+e.FName_l2 warehouseName,
+--仓库名称
+b.FQty qty,--数量
+f.FName_l2 unit,--计量单位
+b.CFOutCustomer outMaterial-- 外部料号 
+
+from T_IM_SaleIssueBill a 
+join T_IM_SaleIssueEntry b 
+
+on a.fid = b.fparentid
+
+join T_SCM_TransactionType c 
+
+on a.FTransactionTypeID = c.fid 
+
+join T_BD_Material d 
+
+on b.FMaterialID = d.fid
+
+join T_DB_WAREHOUSE e 
+
+on b.FWarehouseID = e.fid
+
+join T_BD_MeasureUnit f 
+
+on b.FUnitID = f.fid 
+
+where a.fnumber ='LSSZ1606020008' and a.FStorageOrgUnitID ='/OQAAAE8nSvM567U'  
+
+
+

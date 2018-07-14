@@ -1,0 +1,15 @@
+1.批处理插入语句（将excel表中的语句插入到数据库中，事物提交）
+String sql = "insert into table *****";
+con.setAutoCommit(false);
+ps = con.prepareStatement(sql);
+for(int i=1; i<65536; i++){
+    ps.addBatch();
+    // 1w条记录插入一次
+    if (i % 10000 == 0){
+         ps.executeBatch();
+         con.commit();
+     }
+}
+// 最后插入不足1w条的数据
+ps.executeBatch();
+con.commit();
