@@ -29,7 +29,7 @@ END Fclass
 
 
 3.查询时间条件的一天
-方法一：DateDiff(dd,McreateTime,getdate())=0
+方法一：DateDiff(dd,McreateTime,getdate())=0 （0为今天，1为昨天）
 
 
 
@@ -38,7 +38,7 @@ END Fclass
 4.报表的传值（1=1）
 
 --普通条件（‘’查询所有）
-@Factroy='' OR k.Fctory=@Factroy
+(@Factroy='' OR k.Fctory=@Factroy)
 --时间条件
 AND (@startTime = '' OR CONVERT(varchar(100), QCC.FProductionTime, 23) >= @startTime)
 AND (@endTime = '' OR CONVERT(varchar(100), QCC.FProductionTime, 23) <= @endTime)
@@ -60,8 +60,8 @@ CONVERT(varchar(100), WA.FProductionTime, 23) --转换为 yyyy-DD-mm
 
 6.常见存储过程写法
 1）先将需要的参数值放入临时表
-2）left jion 最终连接查询
-3）DROP 掉临时表
+2）最终连接查询（left jion  #临时表 on 条件） 
+3）清除临时表 （DROP TABLE #TotalNum）
 
 
 
