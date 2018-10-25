@@ -1,4 +1,4 @@
-1.在系统中设置全屏加载（增加my.desktop文件）
+﻿1.在系统中设置全屏加载（增加my.desktop文件）
 cd /home/pi/.config
 mkdir autostart
 cd autostart
@@ -11,7 +11,7 @@ Exec=chromium-browser   --kiosk "http://www.baidu.com"
 2.在/etc/profiled中放入screen.sh文件
 
 
-2.在Iframe中加载网址设置
+3.在Iframe中加载网址一定要设置
 
     $(window).resize(function() {
            $("#framdid").height((document.documentElement.clientHeight - 5));
