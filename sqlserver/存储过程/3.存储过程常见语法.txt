@@ -1,4 +1,4 @@
-1.参数判断是否为空
+﻿1.参数判断是否为空
   isnull(value1,value2)
 
   1）、value1与value2的数据类型必须一致。
