@@ -1,0 +1,13 @@
+1.var json=new Object();
+
+2.º¯Êý¹¹Ôì
+function Get(a,b){
+  this.a=a;
+  this.b=b;
+this.fangfa=function(){
+return this.a+this.b;}
+}
+var json=new Get(a,b);
+json.
+
+
