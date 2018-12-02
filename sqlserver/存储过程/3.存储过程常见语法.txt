@@ -1,4 +1,27 @@
-﻿-----参数判断是否为空
+﻿---创建临时表
+1)：
+select * from INTO #A1
+最后一定要删除删除表DROP TABLE #A1
+2）with a1 as(),
+b1   as()
+
+--联合两张表的数据
+1)union 
+2)union all 不重复
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----参数判断是否为空
   isnull(value1,value2)
 
   1）、value1与value2的数据类型必须一致。

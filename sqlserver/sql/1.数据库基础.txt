@@ -32,7 +32,7 @@ show databases ;//展示所有数据库
 create database 数据库名 character set gbk//创建数据库
 use 数据库名    //对选定的数据库进行操作
 drop databases  //删除数据库
-GO:批处理
+GO:批处理 结果互不影响
 
 
 

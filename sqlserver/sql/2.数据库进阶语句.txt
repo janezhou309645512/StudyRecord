@@ -46,7 +46,7 @@ order by age ASC;//降序
 
 ----------------------------------------------------
 6.多表查询：
----join on//
+原理：返回的数据集是两张表相乘（A*B）后按条件刷选的
 1) 内连接INNER JOIN(默认为join)
 TableA INNER JOIN TableB 
 ON TableA.name = TableB.name
@@ -55,39 +55,8 @@ Inner join//产生的是表A和表B的交集
 -----左外连接，left  join ... on
 把LEFT左边的表中的所有记录保留，右边表只保留相关联的记录
 -----右外连接，right  join ... on 
-示例：
-select a.fnumber billNumber,--单据编码
-c.FName_l2 transactionType ,
---事务类型
-d.fnumber materialNumber,--物料编码
-e.FName_l2 warehouseName,
---仓库名称
-b.FQty qty,--数量
-f.FName_l2 unit,--计量单位
-b.CFOutCustomer outMaterial-- 外部料号 
 
-from T_IM_SaleIssueBill a 
-join T_IM_SaleIssueEntry b 
-
-on a.fid = b.fparentid
-
-join T_SCM_TransactionType c 
-
-on a.FTransactionTypeID = c.fid 
-
-join T_BD_Material d 
-
-on b.FMaterialID = d.fid
-
-join T_DB_WAREHOUSE e 
-
-on b.FWarehouseID = e.fid
-
-join T_BD_MeasureUnit f 
-
-on b.FUnitID = f.fid 
-
-where a.fnumber ='LSSZ1606020008' and a.FStorageOrgUnitID ='/OQAAAE8nSvM567U'  
+ 
 
 
 

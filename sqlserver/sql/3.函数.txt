@@ -1,8 +1,13 @@
 1.字符串函数
 ---CHARINDEX 
+
+
 2.日期函数
 GETDATE() --获取当前时间
 DATEDD(1,2,3)-- 增加与减少日期
 DATEDIFF()--
+
 3，聚合函数
 SUM()
+
+4.row() over
