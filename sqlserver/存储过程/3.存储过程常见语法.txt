@@ -1,9 +1,15 @@
 ﻿---创建临时表
-1)：
+1)：常用（可以两张表同时输出）
 select * from INTO #A1
 最后一定要删除删除表DROP TABLE #A1
-2）with a1 as(),
-b1   as()
+
+2）搭配union输出
+with a1 as(),
+b1  as()
+
+
+
+
 
 --联合两张表的数据
 1)union 
