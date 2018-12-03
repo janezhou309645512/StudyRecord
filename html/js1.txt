@@ -1,8 +1,12 @@
-旧版：Knockout.js
+﻿旧版：Knockout.js
 1） var myViewModel = {}；
 2） data-bind="text:Name"
 3） ko.applyBindings(myViewModel);
 4） 监控属性ko.observable("Lilei"),
+
+5）ko.mapping.fromJS():自动将data里所有的属性创建成observable类型的属性
+6）ko.toJS(data):JavaScript简单对象
+
  
  
  
