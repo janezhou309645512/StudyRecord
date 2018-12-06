@@ -1,0 +1,22 @@
+﻿1.字符串函数
+---CHARINDEX 
+
+
+2.日期函数
+GETDATE() --获取当前时间
+DATEDD(1,2,3)-- 增加与减少日期
+DATEDIFF()--
+
+3，聚合函数
+SUM()
+
+4.row_number() over()函数，给只添加id序号
+1)不加分组
+排序
+
+
+2）加上分组
+去重字段（多字段）   
+
+语法格式：row_number() over(partition by 分组列 order by 排序列 desc)
+over()里头的分组以及排序的执行晚于 where 、group by、  order by 的执行

@@ -16,7 +16,7 @@ where age not between 1000 and 1500;
 5）where -逻辑查询
 where age>=1100 and name='jane';//且
 where age>=1100 or name='jane';//或
-6)where -like //匹配的字符
+6)where -like //模糊查询
 两种通配符
 "_" 代表任意一个字符
 "%" 代表任意多个字符
