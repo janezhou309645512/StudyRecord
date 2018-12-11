@@ -7,6 +7,7 @@ vi my.desktop
 [Desktop Entry]
 Type=Application
 Exec=chromium-browser   --kiosk "http://www.baidu.com" 
+// Exec=chromium-browser  --kiosk  --app=http://www.baidu.com (避免弹出框）
 
 2.在/etc/profiled中放入screen.sh文件
 
