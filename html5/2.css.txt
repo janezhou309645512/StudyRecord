@@ -1,4 +1,4 @@
-﻿css
+css
 
 1.选择器：
 id-----#
@@ -9,10 +9,21 @@ class----.test
 2.基本属性
 width:px
 height:px
+font-size:字体大小
 backgroud:
-position:
+position:定位（一般文档流）
 left:
 top:
+margin : 0 atuo :在正常文档流时居中
+display:block：行内元素转块时 
+字体居中：
+line-height:高度
+z-index：值的大小代表在上面
+
+
+
+
+
 
 
 
