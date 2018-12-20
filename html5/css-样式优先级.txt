@@ -1,8 +1,10 @@
-
+﻿
 
 1.元素转换
 1）.行内元素转块元素(display:block)
+
 2）.块元素转行内元素（display :inline）
+
 3）.行内和块转行内块元素（display :inline-block）
 -------
 2.css层叠性 
