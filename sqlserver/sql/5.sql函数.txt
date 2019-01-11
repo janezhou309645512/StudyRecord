@@ -7,7 +7,7 @@ substring(string,start_position,length) --截取字符串
 ----字符串与数字互转：
 convent(要转换的类型,待转的类型)
 例：
-convent(demical(18,2),varchar(20))
+convert(demical(18,2),varchar(20))
 
 
 2.日期函数
