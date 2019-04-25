@@ -1,0 +1,36 @@
+1.参数 
+1）对象
+2）多字符串 
+3）单个字符串（value)
+
+
+2.各个标签的含义 
+
+1）for each 标签：
+　collection ：collection属性的值有三个分别是list、array、map三种，分别对应的参数类型为：List、数组、map集合，我在上面传的参数为数组，所以值为array
+
+　　　　item ： 表示在迭代过程中每一个元素的别名
+
+　　　　index ：表示在迭代过程中每次迭代到的位置（下标）
+
+　　　　open ：前缀
+
+　　　　close ：后缀
+
+　　　　separator ：分隔符，表示迭代时每个元素之间以什么分隔
+
+2）choose 标签的使用 
+when 
+    <otherwise>     
+                      
+            </otherwise>    
+3）set if 标签的使用 
+
+
+
+
+
+
+
+
+
