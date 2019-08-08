@@ -1,0 +1,10 @@
+1.常见面试题
+2.ssm项目整体学习
+3.常见技术点(RabbitMQ,Redis,nginx)
+
+
+java技术：
+1.spring boot ,spring cloud ,mybatis
+2.redis,nginx,dubbo,
+3.分布式
+
