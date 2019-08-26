@@ -3,8 +3,29 @@
 3.常见技术点(RabbitMQ,Redis,nginx)
 
 
+
+kettle地址：
+https://www.cnblogs.com/unrulywind/p/9714151.html
+java地址：
+https://blog.csdn.net/CharJay_Lin/article/details/80774319
+hadoop学习：
+https://www.cnblogs.com/binarylei/p/8903601.html
+处理场景：
+https://www.cnblogs.com/zuolun2017/p/8026575.html
+
+
 java技术：
-1.spring boot ,spring cloud ,mybatis
-2.redis,nginx,dubbo,
-3.分布式
+工具：git
+1.基础：io,多线程，集合，TCP/IP协议，设计模式
+2.spring,spring mvc ,spring boot ,spring cloud ,mybatis
+3.分布式：Redis,RabbitMQ
+4.sql调优
+1）建立索引，优先使用where的字段()
+2）查索所需要的字段
+3）模糊查询 尽量“li%”后面使用
+4）查询不要用or
+5) 不用使用not in或者in 
+
+
+
 
