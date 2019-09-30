@@ -1,6 +1,22 @@
-1.常见面试题
-2.ssm项目整体学习
-3.常见技术点(RabbitMQ,Redis,nginx)
+框架必备：
+1.1.log 4j日志(自动，手动（OK））
+2.JUNIT 程序调试
+3.git
+4.ssm
+5.shiro验证
+6.拦截器(OK)
+7.登录
+8.热部署（OK）
+9.权限
+表：人员  菜单 角色
+
+
+重要的框架：
+RabbitMQ,Redis,nginx，springcloud,集群分布式部署
+
+
+
+
 
 
 
@@ -14,17 +30,14 @@ https://www.cnblogs.com/binarylei/p/8903601.html
 https://www.cnblogs.com/zuolun2017/p/8026575.html
 
 
-java技术：
-工具：git
-1.基础：io,多线程，集合，TCP/IP协议，设计模式
-2.spring,spring mvc ,spring boot ,spring cloud ,mybatis
-3.分布式：Redis,RabbitMQ
-4.sql调优
-1）建立索引，优先使用where的字段()
-2）查索所需要的字段
-3）模糊查询 尽量“li%”后面使用
-4）查询不要用or
-5) 不用使用not in或者in 
+
+
+java学习项目：
+https://gitee.com/52itstyle/spring-boot-seckill
+https://github.com/macrozheng/mall
+
+
+
 
 
 

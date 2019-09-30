@@ -18,20 +18,22 @@ src/main/resources/public：作用和src/main/resources/static目录一样。
 
 2.注解
 1）Action：
-类中
+----类中
 @Congtroller
 @RequestMapping(value = "/user")
 
 
-方法：
-@ResponseBody 返回json
-@PostMapping("/add") post请求
-接受传过来的值：在方法里的参数里
+-----方法：
+@RequestMapping("/index")：（使用请求方法、请求参数及请求头映射请求） 可以： @RequestMapping(value = "/fetch/{id}", method = RequestMethod.GET)  
+@getMapping("/add"):get请求
+@PostMapping("/add")： post请求
+@ResponseBody ：返回值，不加默认返回页面
 
-2）Service 
-@Service(value = "userService")
 
-3)Dao层
+
+2）Service （注册：@Service）
+
+3)Dao层（注册:@Mapper)
 a.在application哪里引入扫描@MapperScan("com.example.mybatisdemo.dao")
 b.接口：UserMapper：配置数据库操作
 
@@ -44,36 +46,22 @@ b.接口：UserMapper：配置数据库操作
 	例如：
 	public interface UserMapper {
 
-    @Select("SELECT * FROM users")
-    @Results({
-        @Result(property = "userSex",  column = "user_sex", javaType = UserSexEnum.class),
-        @Result(property = "nickName", column = "nick_name")
-    })
     List<UserEntity> getAll();
 
-    @Select("SELECT * FROM users WHERE id = #{id}")
-    @Results({
-        @Result(property = "userSex",  column = "user_sex", javaType = UserSexEnum.class),
-        @Result(property = "nickName", column = "nick_name")
-    })
+    
     UserEntity getOne(Long id);
 
-    @Insert("INSERT INTO users(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})")
+   
     void insert(UserEntity user);
 
-    @Update("UPDATE users SET userName=#{userName},nick_name=#{nickName} WHERE id =#{id}")
+  
     void update(UserEntity user);
 
-    @Delete("DELETE FROM users WHERE id =#{id}")
+  
     void delete(Long id);
 
 }
-
-
-c.引用：@Autowired
-
-4)用bean引用
- @Autowired
+4) 引用bean： @Autowired
  
  
 
