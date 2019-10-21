@@ -18,3 +18,8 @@
   <mirrorOf>central</mirrorOf>        
 </mirror>    
 3)在idea中setting中配置maven中的路径
+
+
+5.配置svn (参考https://www.cnblogs.com/coodream2009/p/9473526.html，https://blog.csdn.net/u010758410/article/details/80532992）
+
+
