@@ -1,0 +1,32 @@
+安装参考（https://www.cnblogs.com/haoliyou/p/8716624.html）
+
+
+1.下载redis (https://redis.io/download)
+
+2.安装Redis(问题解决：https://www.cnblogs.com/liu2-/p/6914159.html)
+redis目录下：
+make 编译
+make install
+
+3.部署后台
+打开etc 里redis.conf配置：
+1）绑定本机ip：bind 127.0.0.1
+2）后台启动：daemonize yes
+
+bin 启动服务：./redis-server
+bin目录启动redis服务，并指定启动服务配置文件：./redis-server ../etc/redis.conf 
+
+
+4.客户端连接：
+bin目录：./redis-cli 
+
+
+
+
+
+
+
+
+
+
+
