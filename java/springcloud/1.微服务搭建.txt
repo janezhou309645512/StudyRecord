@@ -1,3 +1,7 @@
-1.参考：（https://github.com/macrozheng/mall-swarm）
+1.参考mall项目（https://github.com/macrozheng/mall-swarm）
 
-1.erekue的服务注册
+spring cloud学习 ：https://github.com/macrozheng/springcloud-learning
+
+
+需要什么组件就要什么组件
+
