@@ -18,10 +18,14 @@
 创建目录：hadoop fs -mkdir /
 删除文件：hadoop fs -rm /
 删除目录：hadoop fs -rm -r -skipTrash /folder_name（永久删除）
-文件夹权限：hadoop fs -rmr /warehouse/test/ods/ODS_test_report_T_sys_hr_user/*
+hadoop fs -rmr /warehouse/test/ods/ODS_test_report_T_sys_hr_user/*
 放进文件夹：hadoop fs -put  /home/jane.zhou1/ODS_SAP_ZMMR008_SHOW.txt  /warehouse/sap/ods/ODS_SAP_ZMMR008_SHOW/day=2020-02-15/
 
-5.创建
+
+5.hdfs文件集群互迁
+hadoop distcp -skipcrccheck -update hdfs://mycluster/warehouse/sap/ods/ODS_SAP_ZFMM_044   hdfs://10.0.24.205:8020/apps/hive/warehouse/test.db/ly_test3
+
+MSCK REPAIR TABLE 库名.表名;(不需要分区的一种）
 
 
 
