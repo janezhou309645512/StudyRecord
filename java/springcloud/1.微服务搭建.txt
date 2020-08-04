@@ -1,7 +1,35 @@
-1.参考mall项目（https://github.com/macrozheng/mall-swarm）
+参考mall项目（https://github.com/macrozheng/mall-swarm）
 
 spring cloud学习 ：https://github.com/macrozheng/springcloud-learning
+https://www.jianshu.com/p/a0365a635975
 
 
 需要什么组件就要什么组件
+
+1.创建主project,在moudle
+
+2.
+一.什么是微服务
+二.快速开始
+三.功能集成(网关, 服务保护, 负载均衡, 分布式配置中心)
+1.Eureka 服务注册
+
+2.Ribbon 负载均衡的服务调用
+
+3.Hystrix :服务容错保护(一个服务故障时，其依赖服务得到回应）
+
+四.打包
+五.微服务发布利器 -- Docker
+六.Demo
+
+
+
+
+
+
+
+
+
+
+
 

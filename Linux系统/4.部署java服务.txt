@@ -5,17 +5,13 @@ PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
 export JAVA_HOME JRE_HOME PATH CLASSPATH
 
-2
-i  光标插入
-esc  不能编辑
-：wq! 保存退出
 
 
 3.上传rz、下载sz文件
 
 
 4.部署jar服务 
-查找jar服务端口：ps -ef |grep jane-0.0.1-SNAPSHOT.jar  (java -jar)
+查找jar服务端口：ps -ef |grep jane-0.0.1-SNAPSHOT.jar  
 kill掉服务：kill -9 13307
 删除服务：rm -rf jane-0.0.1-SNAPSHOT.jar 
 重新上传服务：
