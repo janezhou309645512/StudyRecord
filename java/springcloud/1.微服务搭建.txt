@@ -2,6 +2,7 @@
 
 spring cloud学习 ：https://github.com/macrozheng/springcloud-learning
 https://www.jianshu.com/p/a0365a635975
+https://blog.csdn.net/weixin_38023579/article/details/81328524
 
 
 需要什么组件就要什么组件
@@ -14,9 +15,27 @@ https://www.jianshu.com/p/a0365a635975
 三.功能集成(网关, 服务保护, 负载均衡, 分布式配置中心)
 1.Eureka 服务注册
 
-2.Ribbon 负载均衡的服务调用
+server:
+  port: 7003
+eureka:
+  instance:
+    hostname: eureka7003.com     # eureka服务端的实力名称
+  client:
+    fetch-registry: false  # false表示自己就是注册中心。我的职责就是维护服务实例，并不需要去检索服务
+    register-with-eureka: false   # false表示自己不需要向注册中心注册自己
+    service-url:
+     #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/      # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址(单机版)
+     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/   # 集群版
+	 
+	 
+2.Feign的使用
 
-3.Hystrix :服务容错保护(一个服务故障时，其依赖服务得到回应）
+
+3.Ribbon 负载均衡的服务调用
+
+
+4.Hystrix :服务容错保护(一个服务故障时，其依赖服务得到回应）
+
 
 四.打包
 五.微服务发布利器 -- Docker
