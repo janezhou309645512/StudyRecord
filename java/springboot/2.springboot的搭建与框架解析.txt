@@ -1,3 +1,5 @@
+了解spring boot( http://c.biancheng.net/spring_boot/)
+
 1.springboot创建web项目
 https://github.com/WinterChenS/my-site
 https://github.com/WinterChenS/springboot2-mybatis-demo
@@ -19,7 +21,7 @@ src/main/resources/public：作用和src/main/resources/static目录一样。
 2.注解
 1）Action：
 ----类中
-@Congtroller
+@Controller
 @RequestMapping(value = "/user")
 
 

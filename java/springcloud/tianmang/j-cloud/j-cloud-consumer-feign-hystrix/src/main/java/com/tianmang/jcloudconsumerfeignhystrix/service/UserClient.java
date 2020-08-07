@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  *
  */
-@FeignClient("PROVIDER-USER1")
+@FeignClient("PROVIDER-USER")
 public interface UserClient {
     /**
      * @FeignClient(value="provider-user") 应用名称

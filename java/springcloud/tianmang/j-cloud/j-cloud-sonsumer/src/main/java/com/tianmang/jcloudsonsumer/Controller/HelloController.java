@@ -21,7 +21,7 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello(){
         //指出服务地址   http://{服务提供者应用名名称}/{具体的controller}
-        String url="http://provider-user1/user/sayHello";
+        String url="http://provider-user/user/sayHello";
 
         //返回值类型和我们的业务返回值一致
         return resttemplate.getForObject(url, String.class);
@@ -30,7 +30,7 @@ public class HelloController {
     @RequestMapping("/hi")
     public String hi(){
         //指出服务地址   http://{服务提供者应用名名称}/{具体的controller}
-        String url="http://provider-user1/user/sayHi";
+        String url="http://provider-user/user/sayHi";
 
         //返回值类型和我们的业务返回值一致
         return resttemplate.getForObject(url, String.class);
@@ -39,7 +39,7 @@ public class HelloController {
     @RequestMapping("/haha")
     public String haha(){
         //指出服务地址   http://{服务提供者应用名名称}/{具体的controller}
-        String url="http://provider-user1/user/sayHaha";
+        String url="http://provider-user/user/sayHaha";
         //返回值类型和我们的业务返回值一致
         return resttemplate.getForObject(url, String.class);
 

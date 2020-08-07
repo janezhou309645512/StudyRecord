@@ -1,0 +1,2 @@
+1.安装RabbitMQ（https://www.cnblogs.com/fengyumeng/p/11133924.html）
+
