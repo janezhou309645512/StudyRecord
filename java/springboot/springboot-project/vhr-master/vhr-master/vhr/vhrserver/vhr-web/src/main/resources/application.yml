@@ -5,16 +5,16 @@ spring:
     password: 123456
     url: jdbc:mysql://10.0.40.233:3306/vhr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
   rabbitmq:
-    username: guest
-    password: guest
-    host: 127.0.0.1
+    username: janezhou
+    password: 123456
+    host: 10.0.40.233
+    port: 15672
     publisher-confirms: true
     publisher-returns: true
   redis:
-    host: 127.0.0.1
+    host: 10.0.40.233
     database: 0
     port: 6379
-    password: 123
   cache:
     cache-names: menus_cache
 server:

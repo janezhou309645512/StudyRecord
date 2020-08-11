@@ -21,6 +21,11 @@ rmdir：删除一个空的目录
 cp: 复制文件或目录
 rm -rf : 移除文件或目录
 mv: 移动文件与目录，或修改文件与目录的名称
+例子：将目录A重命名为B
+mv A B
+例子：将/a目录移动到/b下，并重命名为c
+mv /a /b/c
+
 
 
 5.文件本地上传下载命令
@@ -80,14 +85,48 @@ yum clean headers: 清除缓存目录下的 headers
 yum clean oldheaders: 清除缓存目录下旧的 headers
 yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers
 
-10.关闭防火墙
-
+10.查看防火墙状态：
+firewall-cmd --state
+关闭防火墙
 systemctl stop firewalld.service            #停止firewall
 systemctl disable firewalld.service        #禁止firewall开机启动
 重启防火墙
 
 firewall-cmd --reload
 
+11.查看端口
+netstat命令
+[root@localhost ~]# netstat -ntulp |grep 3306   //查看所有80端口使用情况·
+
+12.wget命令
+使用wget下载单个文件:
+wget http://cn.wordpress.org/wordpress-3.1-zh_CN.zip 
+使用wget -c断点续传 
+
+
+13.文件搜索
+
+1).find命令
+
+例如：find / -name mysql 这句命令的意思是在根目录下按名字查找文件夹名叫mysql的文件夹。
+
+find /usr/local/mysql -name \*.bin 这句命令的意思是在目录“/usr/local/mysql”中搜索以.bin结尾的所有文件。说明：当mysql开启增量备份的时候，会生成很多.bin结尾的文件。
+
+2).locate命令
+
+例如：locate \*.log 这句命令的意思是查找后缀为.log的文件
+
+locate /etc/my 搜索etc目录下所有以my开头的文件
+
+注意：locate命令要比find -name快得多，原因在于它不搜索具体目录，而是搜索一个数据库/var/lib/mlocate/mlocate.db 。为了避免mlocate.db数据库因为更新操作（如添加修改删除）没来得及更新，在使用该命令前应执行一次“updatedb”。
+
+3).whereis命令
+
+例如：whereis tomcat 显示结果“/usr/local/tomcat”通过这句命令可以显示tomcat的位置。
+
+
+14.向配置文件写配置
+echo 'export PATH=$PATH:/usr/local/rabbitmq/sbin' >> /etc/profile
 
 
 
